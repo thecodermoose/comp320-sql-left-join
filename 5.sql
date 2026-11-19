@@ -1,0 +1,1 @@
+select e.firstname || ' ' || e.lastname || ' is ' || (strftime('%Y', 'now') - strftime('%Y', e.birthdate)) || ' years old' from employee e left join employee m on e.reportsto = m.employeeid where m.employeeid is null;

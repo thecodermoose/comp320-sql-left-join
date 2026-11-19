@@ -1,0 +1,1 @@
+select distinct playlist.playlistid, playlist.name from playlist left join playlisttrack on playlist.playlistid = playlisttrack.playlistid left join track on playlisttrack.trackid = track.trackid where playlisttrack.trackid is not null and track.trackid is null order by playlist.playlistid asc;
